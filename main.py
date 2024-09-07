@@ -57,7 +57,7 @@ try:
     )
     """)
     conn.commit()
-    logger.info("Tabla 'transactions' creada o verificada.")
+    logger.info("Tabla 'transactionsNicolasOrozco' creada o verificada.")
 except Exception as e:
     logger.error(f"Error al crear la tabla: {str(e)}")
 
@@ -89,7 +89,7 @@ consumer_conf = {
 }
 
 consumer = Consumer(consumer_conf)
-consumer.subscribe(['transactions_nicolasorozco'])
+consumer.subscribe(['transactionsNicolasOrozco'])
 
 # Función para consumir el mensaje desde Kafka
 async def consume_from_kafka():
